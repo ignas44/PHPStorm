@@ -15,6 +15,7 @@ img[alt="Profilis"]{
     width: 100px;
     height: 100px;
 }
+body
 
 img[alt="Profilis"]:hover{
     animation-name: profilis;
