@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/animacijos.css">
     <link rel="stylesheet" href="CSS/robotovaldymas.css">
 
+
 </head>
 <nav>
     <ul>
@@ -36,7 +37,7 @@
      <center>
     <h1>Ignas Samajauskas</h1>
          <p>
-        <img src="img/pic.jpg" alt="Profilis"/>
+        <img src="img/pic.jpg" alt="Profilis" id="profiliofoto"/>
          </p>
          <p>
              Tai informacija apie mane
@@ -48,11 +49,18 @@
 <br>
 <br>
 <div class="lenta">
-    <img src="img/robotas.jpg"  height="100px" width="100px" id="R2D2"/>
-    <button onclick="judeti()">Judeti i apacia</button>
+
+   <button onclick="judeti()">Judeti i apacia</button>
     <button onclick="judetiidesine()">Judeti i desine</button>
     <button onclick="judetiikaire()">Judeti i kaire</button>
     <button onclick="judetiivirsu()">Judeti i virsu</button>
+
+    <!--<button id="virsu">Judeti i virsu</button>-->
+    <!--<button id="apacia">Judeti i apacia</button>-->
+    <!--<button id="kaire">Judeti i kaire</button>-->
+    <!--<button id="desine">Judeti i desine</button>-->
+    <br>
+    <img src="img/robotas.jpg"  alt="Robotas" height="100px" width="100px" id="R2D2"/>
     <div class="eilute">
 
         <div class="stulpelis"><div class="balta"></div></div>
@@ -114,7 +122,9 @@
     Visos teises saugomos 2018
     </center>
 </footer>
+<script src="JS/JQuery biblioteka.js"></script>
     <script src="JS/script.js"></script>
     <script src="JS/valdymas.js"></script>
+
 </body>
 </html>

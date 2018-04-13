@@ -15,9 +15,21 @@ img[alt="Profilis"]{
     width: 100px;
     height: 100px;
 }
-body
-
 img[alt="Profilis"]:hover{
     animation-name: profilis;
     animation-duration: 20s;
+}
+@keyframes robotas {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+    to {
+        width: 500px;
+        height: 500px;
+    }
+}
+img[alt="Robotas"]:hover{
+    animation-name: robotas;
+    animation-duration: 3s;
 }
