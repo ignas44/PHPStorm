@@ -1,130 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="manoApsas">
 <head>
-    <title>Pirmasis puslapis</title>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/sachmatuLenta.css">
-    <link rel="stylesheet" href="CSS/meniu.css">
-    <link rel="stylesheet" href="CSS/animacijos.css">
-    <link rel="stylesheet" href="CSS/robotovaldymas.css">
-
-
+    <meta charset="UTF-8">
+    <title>Puslapis</title>
+    <base href="/">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/meniu.css">
+    <link rel="stylesheet" href="/css/sachmatuLenta.css">
+    <link rel="stylesheet" href="/css/robotovaldymas.css">
+    <link rel="stylesheet" href="/css/animacijos.css">
 </head>
-<nav>
+<body>
+<nav ng-controller="menuController as mc">
     <ul>
-
-        <li>
-        <a href="index.html">Pradzia</a>
-        </li>
-        <li>
-            <a href="Kontaktai.html">Kontaktai</a>
+        <li ng-repeat="item in mc.meniu">
+            <!--ng-if="item.submeniu==''" ng-hide="kintamasis2"-->
+            <a href="{{item.url}}">{{item.pavadinimas}}</a>
         </li>
     </ul>
 </nav>
-<ul>
-    <li>
-        <a href="Katalogas.html">Katalogas</a>
-    </li>
-    <li>
-        <a href="http://youtube.com">Youtube</a>
-    </li>
-    <li>
-        <a href="http://google.lt">Google</a>
-    </li>
-</ul>
-</aside>
-<div class="turinys">
-     <center>
-    <h1>Ignas Samajauskas</h1>
-         <p>
-        <img src="img/pic.jpg" alt="Profilis" id="profiliofoto"/>
-         </p>
-         <p>
-             Tai informacija apie mane
-         </p>
-     </center>
-</div>
-<br>
-<br>
-<br>
-<br>
-<div class="lenta">
-
-   <button onclick="judeti()">Judeti i apacia</button>
-    <button onclick="judetiidesine()">Judeti i desine</button>
-    <button onclick="judetiikaire()">Judeti i kaire</button>
-    <button onclick="judetiivirsu()">Judeti i virsu</button>
-
-    <!--<button id="virsu">Judeti i virsu</button>-->
-    <!--<button id="apacia">Judeti i apacia</button>-->
-    <!--<button id="kaire">Judeti i kaire</button>-->
-    <!--<button id="desine">Judeti i desine</button>-->
-    <br>
-    <img src="img/robotas.jpg"  alt="Robotas" height="100px" width="100px" id="R2D2"/>
-    <div class="eilute">
-
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-    </div>
-    <div class="eilute">
-    <div class="stulpelis"><div class="melyna"></div></div>
-    <div class="stulpelis"><div class="zalia"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-    <div class="stulpelis"><div class="raudona"></div></div>
-    <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="zalia"></div></div>
-    </div>
-    <div class="eilute">
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="ruda"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="raudona"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-    </div>
-    <div class="eilute">
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="ruda"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="zalia"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="balta"></div></div>
-    </div>
-    <div class="eilute">
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="raudona"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-        <div class="stulpelis"><div class="balta"></div></div>
-        <div class="stulpelis"><div class="melyna"></div></div>
-    </div>
-</div>
-<div class="apibudinimas Pomegiai">
-    <p>
-    <h2>Pomegiai</h2>
-    <ul>
-        <li>Sportas</li><li>Tenisas</li><li>Programavimas</li>
-    </ul>
-    </p>
-</div>
-<div align="center">
-<iframe class="video" width="420" height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
-</iframe>
-</div>
+<ng-view></ng-view>
 <footer>
     <hr/>
     <center>
-    Visos teises saugomos 2018
+        Visos teises saugomos 2018
     </center>
 </footer>
-<script src="JS/JQuery biblioteka.js"></script>
-    <script src="JS/script.js"></script>
-    <script src="JS/valdymas.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="/js/AngularJS/manoApsas.js"></script>
 
+<script src="/js/JQuery%20biblioteka.js"></script>
+<script src="/js/valdymas.js"></script>
 </body>
 </html>
